@@ -14,10 +14,28 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="app/index.js"></script>
 </head>
+<!-- 1st = {{4*2}} -->
 
 <body ng-app="basicApp">
-
-</body>
-
+  <div ng-controller="controllerTop">
+    {{name}} {{username}}
+  </div>
+  <div ng-controller="controllerBottom">
+    {{name}} {{username}}
+  </div>
+<!-- //  2nd = {{4*2}} -->
+<script>
+  app.controller("controllerTop",function($scope)
+  {
+    $scope.name="Dang Tuan Huy";
+    $scope.username = "Gama";
+  });
+  app.controller("controllerBottom",function($scope)
+  {
+    $scope.name="Dang Tuan Huy H";
+    $scope.username ="Hachi";
+  });
+</script>
 </html>
